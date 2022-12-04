@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Meet Lisbon</string>
+    <string name="todo">TODO</string>
+    <string name="log_in">Log in</string>
+    <string name="password">password</string>
+    <string name="username">username</string>
+    <string name="n_o_tem_conta_registar">Não tem conta? Registar</string>
+    <string name="continuar_como_convidado">Continuar como convidado</string>
+</resources>

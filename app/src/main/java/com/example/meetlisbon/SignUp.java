@@ -47,7 +47,7 @@ public class SignUp extends AppCompatActivity {
                 resp -> {
 
                     DynamicToast.makeSuccess(this, "User created!").show();
-                    Intent intent = new Intent(this, MainActivity.class);
+                    Intent intent = new Intent(this, Login.class);
                     startActivity(intent);
                 },
                 error -> DynamicToast.makeError(this, "User not created!").show()) {

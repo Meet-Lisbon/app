@@ -231,7 +231,7 @@ public class RouteActivity extends AppCompatActivity implements OnMapReadyCallba
         if(first) {
             map.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 14));
             first = false;
-        } else if(start) map.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 17));
+        } else if(start) map.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 20));
     }
 
     private void showMarker(double latitude, double longitude, String name) {

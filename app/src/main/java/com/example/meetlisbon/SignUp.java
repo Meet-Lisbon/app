@@ -42,7 +42,7 @@ public class SignUp extends AppCompatActivity {
         EditText userText = findViewById(R.id.usernameCreate);
         EditText emailText = findViewById(R.id.emailInsert);
         EditText passText = findViewById(R.id.passwordCreate);
-        String url = "https://api.meetlisbon.pt/api/user/register";
+        String url = "https://api.meetlisbon.pt/api/users/register";
         StringRequest req = new StringRequest(Request.Method.POST, url,
                 resp -> {
 

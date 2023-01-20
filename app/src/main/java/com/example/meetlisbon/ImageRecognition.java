@@ -31,7 +31,9 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class ImageRecognition extends AppCompatActivity {
     SharedPreferences prefs;
@@ -63,14 +65,12 @@ public class ImageRecognition extends AppCompatActivity {
         String classification = prefs.getString("imageClassification", "");
         landmarkImage.setImageBitmap(image);
         landmarkText.setText(classification);
-
         setDescription(classification);
-
     }
 
     private void setDescription(String placeName) {
 
-        String url = "https://api.meetlisbon.pt/api/places?name=";
+        String url = "https://api.meetlisbon.pt/api/places?placeName=";
         String encodedPlaceName = null;
         try {
             encodedPlaceName = URLEncoder.encode(placeName, StandardCharsets.UTF_8.toString());

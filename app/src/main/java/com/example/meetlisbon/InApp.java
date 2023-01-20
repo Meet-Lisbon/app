@@ -229,7 +229,13 @@ public class InApp extends AppCompatActivity implements LocationListener, OnMapR
                     "Praça Luís de Camões",
                     "Armazéns do Chiado",
                     "Casa dos Bicos / Fundação José Saramago",
-                    "Kali"
+                    "Arco do Triunfo",
+                    "IADE",
+                    "Lisbon Story Centre",
+                    "Timeout Market",
+                    "Estátua D. José I",
+                    "Rua cor de Rosa",
+                    "Teatro da Trindade INATEL"
             };
 
             String s = "";
@@ -358,10 +364,12 @@ public class InApp extends AppCompatActivity implements LocationListener, OnMapR
         map = googleMap;
         placeMarkers();
         mapLocate(true);
+        Log.i("I", "'ve come to talk to you again'");
 
     }
     private void mapLocate(boolean zoom) {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            Log.i("Hello", "darkness my old friend");
             ActivityCompat.requestPermissions
                     (this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 56);
             return;

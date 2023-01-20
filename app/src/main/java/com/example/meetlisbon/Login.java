@@ -26,6 +26,7 @@ import org.json.JSONObject;
 
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Vector;
 
@@ -44,6 +45,7 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         prefs = getSharedPreferences("settings", Context.MODE_PRIVATE);
         edit=prefs.edit();
+        edit.putStringSet("locationsVisited", new HashSet<>());
 
         String token = this.getToken();
         if(!token.isEmpty()) {

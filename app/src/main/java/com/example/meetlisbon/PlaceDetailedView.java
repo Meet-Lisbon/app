@@ -88,7 +88,7 @@ public class PlaceDetailedView extends AppCompatActivity {
     }
 
     protected void download() {
-        String url = "https://api.meetlisbon.pt/api/places?name=";
+        String url = "https://api.meetlisbon.pt/api/places?placeName=";
         String encodedPlaceName = null;
         try {
             encodedPlaceName = URLEncoder.encode(placeName, StandardCharsets.UTF_8.toString());

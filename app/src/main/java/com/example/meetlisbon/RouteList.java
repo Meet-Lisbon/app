@@ -23,6 +23,7 @@ import org.json.JSONException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 
 public class RouteList extends AppCompatActivity {
@@ -90,6 +91,12 @@ public class RouteList extends AppCompatActivity {
 
         };
         if(getToken() != null) queue.add(req);
+    }
+
+    @Override
+    protected void onRestart() {
+        populate();
+        super.onRestart();
     }
 
     private String getToken() {

@@ -132,6 +132,7 @@ public class RouteAdd extends AppCompatActivity {
                     Log.i("ON", "Success!");
                     placeNameIds.put(jsonArray.getJSONObject(i).getString("placeName"), jsonArray.getJSONObject(i).getString("id"));
                 }
+
                 ArrayAdapter<String> placeNamesAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_checked, new ArrayList<>(placeNameIds.keySet()));
                 placeListView.setAdapter(placeNamesAdapter);
                 placeListView.setOnItemClickListener((parent, view, position, id) -> {
